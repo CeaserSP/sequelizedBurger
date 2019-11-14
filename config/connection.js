@@ -12,6 +12,6 @@ var sequelize = new Sequelize("starwars", "root", "", {
     idle: 10000
   }
 });
-
+// test repo connection
   // Export connection for our ORM to use.
   module.exports = sequelize;  
