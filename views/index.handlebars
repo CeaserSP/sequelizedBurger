@@ -1,0 +1,32 @@
+<h1>Burgers!</h1>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="brg">Burger Name:</label>
+    <input type="text" id="brg" name="name">
+  </div>
+
+  <button type="submit" id="submit">Add Burger</button>
+  </form>
+
+  <h1>Your burgers.</h1><br>
+  <h3>Click to devoure burgers.</h3>
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      <button class="buttonEat" id={{id}} changeState={{devoured}}>{{burger_name}}</button>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that have been devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+    <p>{{burger_name}}</p>
+    {{/if}}
+  {{/each}}
+</ul>
